@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color:#541e1b;
+  font-family:'Netflix font';
 }
 
 .App-logo {
@@ -35,4 +37,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#posterContainer{
+  margin:100px;
+}
+#searchButton{
+  margin:10px;
 }
