@@ -4,13 +4,13 @@ import React, {useState} from 'react';
 function App() {
 
   const [movie,setMovie]=useState("")
+  const [pSource,setSource]=useState("")
 
   const handleChange=(e)=>{
     setMovie(e.target.value);
   }
 
   function retrievePoster(){
-    const curPoster=document.getElementById("curPoster");
     const key=process.env.REACT_APP_KEY;
   
     let m=movie.trim();
@@ -20,7 +20,7 @@ function App() {
       if(data.results){
         const path=data.results[0]['poster_path'];
         const newPath=`https://image.tmdb.org/t/p/w200${path}`;
-        curPoster.src=newPath;
+        setSource(newPath);
       }
     })
   
@@ -34,7 +34,7 @@ function App() {
       <button id="searchButton" onClick={retrievePoster} class='btn btn-primary'>Search</button>
 
       <div id="posterContainer">
-        <img id="curPoster"></img>
+        <img id="curPoster" src={pSource}></img>
       </div>
           
     </div>
