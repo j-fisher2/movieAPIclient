@@ -36,8 +36,13 @@ function App() {
 
   return (
     <div className="App">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"></link>
-      <h1>Movie Poster Display</h1>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous">
+      </link>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="mx-auto">
+          <h1 className="navbar-brand" style={{ fontSize: '2rem' }}>Movie Poster Display</h1>
+        </div>
+      </nav>
       <form onSubmit={handleSubmit}>
         <input type="text" id="movieInput" placeholder="Enter a movie title" value={movie} onChange={handleChange}></input>
         <button type="submit" id="searchButton" className="btn btn-primary">Search</button>
