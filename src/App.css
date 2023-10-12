@@ -45,3 +45,8 @@
 #searchButton{
   margin:10px;
 }
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
